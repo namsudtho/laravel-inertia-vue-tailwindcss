@@ -1,6 +1,6 @@
 const mix = require('laravel-mix');
 const path = require('path');
-
+require('mix-tailwindcss');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,13 +12,9 @@ const path = require('path');
  |
  */
 
-mix.js('./resources/js/app.js', './public/js')
-  .postCss('./resources/css/app.css', './public/css', [
-    require('postcss-import'),
-    require('postcss-nesting'),
-    require('tailwindcss'),
-    require('autoprefixer')
-  ])
+mix.js('resources/js/app.js', 'public/js')
+  .sass('resources/sass/app.scss', 'public/css')
+  .tailwind('tailwind.config.js')
   .webpackConfig({
     output: {
       chunkFilename: 'js/[name].js?id=[chunkhash]'
