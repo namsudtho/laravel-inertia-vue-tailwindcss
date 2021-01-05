@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-        "axios": "^0.19",
+        "axios": "^0.21",
         "cross-env": "^5.1",
         "inertia-vue": "inertiajs/inertia-vue",
         "laravel-mix": "^4.0.7",
